@@ -4,6 +4,7 @@ import { ServerThemeProvider } from "next-themes";
 import Providers from "./providers";
 import { generalData } from "@/data/general";
 import type { Metadata } from "next";
+import { Toolbar } from "@/components/Toolbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,7 +38,9 @@ export default function RootLayout({
     <ServerThemeProvider attribute="class">
       <html lang="en">
         <body className={`${inter.className} dark:bg-neutral-900`}>
-          <Providers>{children}</Providers>
+          <Providers>
+            <Toolbar>{children}</Toolbar>
+          </Providers>
         </body>
       </html>
     </ServerThemeProvider>

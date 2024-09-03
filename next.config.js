@@ -7,6 +7,16 @@ const nextConfig = {
         hostname: "github.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "media.licdn.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "ooof.dev",
+        port: "",
+      },
     ],
   },
 };

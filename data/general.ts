@@ -1,30 +1,35 @@
 export const generalData = {
-  name: "John Doe",
-  avatar: "https://github.com/ibelick.png",
-  jobTitle: "Senior Front-End Developer",
-  website: "https://www.julienthibeaut.xyz",
+  name: "RIOU Kevin",
+  avatar: "https://ooof.dev/seo/icon.png",
+  jobTitle: "Senior Fullstack Developer",
+  website: "https://ooof.dev",
   about:
-    "Hey there! I'm John, a senior front-end developer with 10 years of experience in web development.",
+    "I'm RIOU Kevin, also known as OOOF, a senior full-stack and mobile developer with a wealth of experience in crafting web and mobile applications. I excel at building scalable architectures from the ground up and have a proven track record in leading development teams to deliver successful projects. I'm currently available for freelance opportunities and eager to collaborate on your next venture. Visit my website at ooof.dev for more information.",
   contacts: [
     {
       label: "Email",
-      value: "john.doe@gmail.com",
-      href: "mailto:john.doe@gmail.com",
+      value: "kevin@ooof.dev",
+      href: "mailto:kevin@ooof.dev",
+    },
+    {
+      label: "Phone",
+      value: "+33 6 99 01 13 80",
+      href: "tel:+33699011380",
+    },
+    {
+      label: "Personnal website",
+      value: "https://kevin.riou.pro",
+      href: "https://kevin.riou.pro",
     },
     {
       label: "Twitter",
-      value: "ibelick",
-      href: "https://twitter.com/ibelick",
+      value: "@ooofdotdev",
+      href: "https://twitter.com/ooofdotdev",
     },
     {
-      label: "Github",
-      value: "ibelick",
-      href: "https://github.com/ibelick",
-    },
-    {
-      label: "Read.CV",
-      value: "ibelick",
-      href: "https://read.cv/ibelick",
+      label: "Personnal Github",
+      value: "@rioukkevin",
+      href: "https://github.com/rioukkevin",
     },
   ],
 };

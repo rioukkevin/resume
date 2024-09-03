@@ -16,16 +16,16 @@ const ThemeSwitch = () => {
 
   return (
     <>
-      <label
+      {/* <label
         htmlFor="theme"
         className="mr-2 font-light text-sm text-slate-400 dark:text-slate-400"
       >
         Theme
-      </label>
+      </label> */}
       <select
         value={theme}
         onChange={(e) => setTheme(e.target.value)}
-        className="font-light text-sm text-slate-900 dark:text-slate-100"
+        className="font-light text-sm text-slate-900 dark:text-slate-100 rounded-md bg-transparent border border-neutral px-2"
         id="theme"
       >
         <option value="system">System</option>
