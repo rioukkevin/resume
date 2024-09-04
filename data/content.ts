@@ -1,4 +1,6 @@
-export const contentData = [
+import { ContentData } from "@/typings/content";
+
+export const contentData: ContentData = [
   {
     title: "Work Experience",
     items: [
@@ -175,15 +177,3 @@ export const contentData = [
     ],
   },
 ];
-
-export type Content = {
-  title: string;
-  items: {
-    title: string;
-    subTitle: string;
-    date: string;
-    description: string;
-  }[];
-};
-
-export type ContentData = Content[];
