@@ -1,7 +1,7 @@
 export const generalData = {
   name: "RIOU Kevin",
   avatar: "https://ooof.dev/seo/icon.png",
-  jobTitle: "Senior Fullstack Developer",
+  jobTitle: "Confirmed Fullstack Developer",
   website: "https://ooof.dev",
   about:
     "I'm RIOU Kevin, also known as OOOF, a senior full-stack and mobile developer with a wealth of experience in crafting web and mobile applications. I excel at building scalable architectures from the ground up and have a proven track record in leading development teams to deliver successful projects. I'm currently available for freelance opportunities and eager to collaborate on your next venture. Visit my website at ooof.dev for more information.",
@@ -17,19 +17,24 @@ export const generalData = {
       href: "tel:+33699011380",
     },
     {
+      label: "Address",
+      value: "Paris, France",
+      href: "https://maps.app.goo.gl/5555555555555555",
+    },
+    {
       label: "Personnal website",
       value: "https://kevin.riou.pro",
       href: "https://kevin.riou.pro",
     },
     {
-      label: "Twitter",
-      value: "@ooofdotdev",
-      href: "https://twitter.com/ooofdotdev",
-    },
-    {
       label: "Personnal Github",
       value: "@rioukkevin",
       href: "https://github.com/rioukkevin",
+    },
+    {
+      label: "Twitter",
+      value: "@ooofdotdev",
+      href: "https://twitter.com/ooofdotdev",
     },
   ],
 };

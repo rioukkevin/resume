@@ -1,7 +1,8 @@
-import { generalData } from "@/data/general";
+import { generalData as defaultData } from "@/data/general";
+import { GeneralData } from "@/typings/content";
 import Image from "next/image";
 
-export const Header = () => {
+export const Header = ({ generalData = defaultData }: { generalData?: GeneralData }) => {
   return (
     <section className="flex items-center leading-relaxed break-inside-avoid">
       <Image

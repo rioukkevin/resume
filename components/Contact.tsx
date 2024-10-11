@@ -1,6 +1,7 @@
-import { generalData } from "@/data/general";
+import { generalData as defaultData } from "@/data/general";
+import { GeneralData } from "@/typings/content";
 
-export const Contact = () => {
+export const Contact = ({ generalData = defaultData }: { generalData?: GeneralData }) => {
   return (
     <section className="my-14 text-sm leading-relaxed break-inside-avoid">
       <h3 className="mb-6 text-4xl text-primary font-bold uppercase">
