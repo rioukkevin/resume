@@ -1,6 +1,7 @@
 "use client";
 
 import { contentData } from "@/data/content";
+import { contentDataFR } from "@/data/fr/content";
 import { useState, useCallback } from "react";
 import slug from "slug";
 
@@ -17,14 +18,35 @@ const colors = [
 const BAR_HEIGHT = 8;
 
 export const Timeline = () => {
-  const experiencesData = contentData[0].items;
+  const contentDataToUse = window.location.pathname.includes("/fr")
+    ? contentDataFR
+    : contentData;
+
+  console.log(
+    window.location.pathname.includes("/fr"),
+    contentDataToUse,
+    contentDataFR,
+    contentData
+  );
+
+  const SideProjectsTitle = window.location.pathname.includes("/fr")
+    ? "Projets personnels"
+    : "Side projects";
+
+  const Present = window.location.pathname.includes("/fr")
+    ? "Présent"
+    : "Present";
+
+  const experiencesData = contentDataToUse[0].items;
   const sideProjects = experiencesData.find(
-    (exp) => exp.title === "Side projects"
+    (exp) => exp.title === SideProjectsTitle
   ); // Side projects
   const experiences = [
     sideProjects!,
-    ...experiencesData.filter((exp) => exp.title !== "Side projects"),
+    ...experiencesData.filter((exp) => exp.title !== SideProjectsTitle),
   ];
+
+  console.log(experiences);
 
   const absoluteStartYear = 2016;
   const absoluteStartMonth = 9;
@@ -45,7 +67,7 @@ export const Timeline = () => {
   }, []);
 
   const handleGotTo = (title: string) => {
-    const slugg = `item-${slug(contentData[0].title + title)}`;
+    const slugg = `item-${slug(contentDataToUse[0].title + title)}`;
     const element = document.getElementById(slugg);
 
     if (element) {
@@ -111,7 +133,7 @@ export const Timeline = () => {
             const dates = exp.date.split(" - ");
             const [startMonth, startYear] = dates[0].split("-").map(Number);
             const [endMonth, endYear] =
-              dates[1] === "Present"
+              dates[1] === Present
                 ? [currentMonth, currentYear]
                 : dates[1].split("-").map(Number);
 
@@ -126,7 +148,7 @@ export const Timeline = () => {
               (endYear - startYear) * 12 + (endMonth - startMonth);
 
             const width =
-              dates[1] === "Present"
+              dates[1] === Present
                 ? 100 - startPos
                 : monthDuration * oneMonthPercentage + oneMonthPercentage;
 
