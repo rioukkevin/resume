@@ -19,22 +19,32 @@ export const generalData = {
     {
       label: "Address",
       value: "Paris, France",
-      href: "https://maps.app.goo.gl/5555555555555555",
+      href: "https://www.google.fr/maps/place/Paris/@48.858904,2.3058358,13z",
     },
     {
-      label: "Personnal website",
+      label: "Freelance",
+      value: "https://ooof.dev",
+      href: "https://ooof.dev",
+    },
+    {
+      label: "Portfolio",
       value: "https://kevin.riou.pro",
       href: "https://kevin.riou.pro",
     },
     {
-      label: "Personnal Github",
+      label: "Github",
       value: "@rioukkevin",
       href: "https://github.com/rioukkevin",
     },
     {
-      label: "Twitter",
+      label: "X (Twitter)",
       value: "@ooofdotdev",
       href: "https://twitter.com/ooofdotdev",
+    },
+    {
+      label: "Resume",
+      value: "https://resume.riou.pro",
+      href: "https://resume.riou.pro",
     },
   ],
 };

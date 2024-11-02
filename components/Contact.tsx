@@ -26,11 +26,11 @@ export const Contact = ({
           Contact
         </h3>
       </TitleWrapper>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-2">
         {generalData.contacts.map((contact, index) => {
           return (
             <div className="flex" key={index}>
-              <div className="mr-8 max-w-[140px] w-full text-slate-400 dark:text-slate-400">
+              <div className="mr-8 max-w-[160px] w-full text-slate-400 dark:text-slate-400">
                 {contact.label}
               </div>
               <div className="flex flex-col flex-1 text-slate-900 dark:text-slate-100">
