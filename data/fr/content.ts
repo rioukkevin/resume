@@ -16,7 +16,7 @@ export const contentDataFR: ContentData = [
         subTitle: "Développeur web fullstack",
         date: "2016 - Présent",
         description:
-          "## À propos\n\nDurant mon temps libre, je travaille sur des projets personnels, certains pour mes besoins, d'autres pour des besoins du monde de l'influence sur les réseaux ou d'associations.\n\n## Projets\n\n- Extension VSCode open-source pour gérer les messages de commit avec un modèle personnalisable\n- Un portfolio pour présenter certains de mes projets et explorer des technologies (6 versions différentes depuis 2016)\n- Un site web pour l'association Chariteam pour suivre les événements et les dons\n- Un bot Twitch complexe pour le streaming de Poachimpa pour aider à créer de l'engagement, suivre les événements, obtenir des statistiques, gérer les spectateurs\n- Scripts et bots Discord pour aider à organiser des réunions ou faciliter le quotidien avec des interactions amusantes\n- Une application mobile de paris annulée avant sa publication\n- Quelques interfaces web pour avoir des statistiques d'abonnements\n- Un compteur synchronisé sur plusieurs appareils pour l'événement des 15 ans de l'association Outtrans pour gérer les entrées\n\n## Technologies utilisées\n\n**Javascript** **Typescript**\n**React.js** **Vue.js2/3** **NextJS** **NuxtJS** **Pug** **CSS** **Sass/Scss** **Less** **TailwindCSS**\n**ReactNative** **Expo.js**\n**Node.JS** **REST** **GraphQL** **NestJS** **Socket.io** **Express** **Koa**\n**Vercel** **Netlify** **Firebase** **Supabase** **Glitch** **Heroku** **Docker** **Kubernetes** **Helm** **OVHCloud (serveur dédié)** **Expo Cloud**\n**Github** **Gitlab**\n\nEt bien d'autres technologies pour les essayer...",
+          "## À propos\n\nDurant mon temps libre, je travaille sur des projets personnels, certains pour mes besoins, d'autres pour des besoins du monde de l'influence sur les réseaux ou d'associations.\n\n## Cas:\n\n- Open-source\n- Association Chariteam\n- Association Outtrans\n- Streaming de Poachimpa\n- Besoins personnels\n\n## Projets\n\n- Extension VSCode open-source pour gérer les messages de commit avec un modèle personnalisable\n- Un portfolio pour présenter certains de mes projets et explorer des technologies (6 versions différentes depuis 2016)\n- Un site web pour l'association Chariteam pour suivre les événements et les dons\n- Un bot Twitch complexe pour le streaming de Poachimpa pour aider à créer de l'engagement, suivre les événements, obtenir des statistiques, gérer les spectateurs\n- Scripts et bots Discord pour aider à organiser des réunions ou faciliter le quotidien avec des interactions amusantes\n- Une application mobile de paris annulée avant sa publication\n- Quelques interfaces web pour avoir des statistiques d'abonnements\n- Un compteur synchronisé sur plusieurs appareils pour l'événement des 15 ans de l'association Outtrans pour gérer les entrées\n\n## Technologies utilisées\n\n**Javascript** **Typescript**\n**React.js** **Vue.js2/3** **NextJS** **NuxtJS** **Pug** **CSS** **Sass/Scss** **Less** **TailwindCSS**\n**ReactNative** **Expo.js**\n**Node.JS** **REST** **GraphQL** **NestJS** **Socket.io** **Express** **Koa**\n**Vercel** **Netlify** **Firebase** **Supabase** **Glitch** **Heroku** **Docker** **Kubernetes** **Helm** **OVHCloud (serveur dédié)** **Expo Cloud**\n**Github** **Gitlab**\n\nEt bien d'autres technologies pour les essayer...",
       },
       {
         title: "Technis",
@@ -62,7 +62,8 @@ export const contentDataFR: ContentData = [
         title: "MBA Expert en Système d'information",
         subTitle: "MyDigitalSchool Angers",
         date: "2020 - 2022",
-        description: "Spécialisation en Technologie de Développement / Management.",
+        description:
+          "Spécialisation en Technologie de Développement / Management.",
       },
       {
         title: "Licence professionnelle Web",
@@ -85,7 +86,8 @@ export const contentDataFR: ContentData = [
         title: "Français",
         subTitle: "Langue maternelle",
         date: "",
-        description: "Langue maternelle, maîtrise parfaite dans tous les aspects.",
+        description:
+          "Langue maternelle, maîtrise parfaite dans tous les aspects.",
       },
       {
         title: "Anglais",
@@ -103,7 +105,8 @@ export const contentDataFR: ContentData = [
         title: "Ooof.dev",
         subTitle: "Site web pour le freelance",
         date: "2024",
-        description: "Site web pour le nom commercial ooof.dev dédié au freelance.",
+        description:
+          "Site web pour le nom commercial ooof.dev dédié au freelance.",
       },
       {
         title: "Extension VSCode - VSCode Git Commit",
