@@ -1,20 +1,60 @@
+"use client";
+
 import type { Content } from "@/typings/content";
+import slug from "slug";
 import Markdown from "react-markdown";
+import { Timeline } from "./Timeline";
+import { useScrollingFixed } from "./useScrollingFixed";
+
+export const CUSTOM_COMPONENTS = {
+  timeline: <Timeline />,
+};
 
 type ContentProps = Content;
 
-export const ContentComponent: React.FC<ContentProps> = ({ title, items }) => {
+export const ContentComponent: React.FC<ContentProps> = (content) => {
+  const { items, title, component } = content;
+  const { containerRef, titleRef, titleWrapperProps, TitleWrapper } =
+    useScrollingFixed<HTMLElement, HTMLHeadingElement>();
+
   return (
-    <section className="my-14 text-sm leading-relaxed break-inside-avoid">
-      <h3 className="mb-6 uppercase text-4xl text-primary font-bold">
-        {title}
-      </h3>
-      <div className="flex flex-col gap-6 break-after-auto">
+    <section
+      ref={containerRef}
+      id="container"
+      className="my-14 text-sm leading-relaxed relative"
+    >
+      {title && (
+        <TitleWrapper {...titleWrapperProps}>
+          <div ref={titleRef}>
+            <h3
+              className={`py-4 uppercase text-4xl text-primary font-bold`}
+              style={{
+                width: "auto",
+              }}
+            >
+              {title}
+            </h3>
+            {!!component ? CUSTOM_COMPONENTS[component] : <></>}
+          </div>
+        </TitleWrapper>
+      )}
+
+      <div className={`flex flex-col gap-6 break-after-auto`}>
         {items.map((item, index) => {
           return (
-            <div className="flex break-inside-avoid" key={index}>
+            <div
+              id={`item-${slug(title + item.title)}`}
+              className="flex break-inside-avoid scroll-m-24"
+              key={index}
+            >
               <div className="mr-8 max-w-[150px] w-full text-slate-400 dark:text-slate-400">
-                <p className="font-bold text-slate-800 dark:text-slate-200">
+                <p className="font-bold flex items-center gap-2 text-slate-800 dark:text-slate-200">
+                  {item.color && (
+                    <div
+                      className="w-3 h-3 rounded-full"
+                      style={{ backgroundColor: item.color }}
+                    />
+                  )}
                   {item.title}
                 </p>
                 <p className="text-slate-400">{item.subTitle}</p>

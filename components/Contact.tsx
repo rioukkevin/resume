@@ -1,12 +1,31 @@
+"use client";
+
 import { generalData as defaultData } from "@/data/general";
 import { GeneralData } from "@/typings/content";
+import { useScrollingFixed } from "./useScrollingFixed";
 
-export const Contact = ({ generalData = defaultData }: { generalData?: GeneralData }) => {
+export const Contact = ({
+  generalData = defaultData,
+}: {
+  generalData?: GeneralData;
+}) => {
+  const { containerRef, titleRef, titleWrapperProps, TitleWrapper } =
+    useScrollingFixed<HTMLElement, HTMLHeadingElement>();
+
   return (
-    <section className="my-14 text-sm leading-relaxed break-inside-avoid">
-      <h3 className="mb-6 text-4xl text-primary font-bold uppercase">
-        Contact
-      </h3>
+    <section
+      ref={containerRef}
+      id="container"
+      className="my-14 text-sm leading-relaxed break-inside-avoid"
+    >
+      <TitleWrapper {...titleWrapperProps}>
+        <h3
+          ref={titleRef}
+          className="py-4 text-4xl text-primary font-bold uppercase"
+        >
+          Contact
+        </h3>
+      </TitleWrapper>
       <div className="flex flex-col gap-6">
         {generalData.contacts.map((contact, index) => {
           return (

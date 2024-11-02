@@ -3,6 +3,7 @@ import { ContentData } from "@/typings/content";
 export const contentDataFR: ContentData = [
   {
     title: "Expérience Professionnelle",
+    component: "timeline",
     items: [
       {
         title: "Ooof",
