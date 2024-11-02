@@ -1,3 +1,5 @@
+"use client";
+
 import { ContentComponent } from "@/components/Content";
 import { Header } from "@/components/Header";
 import { About } from "@/components/About";

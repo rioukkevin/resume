@@ -17,6 +17,10 @@ export const ContentComponent: React.FC<ContentProps> = (content) => {
   const { containerRef, titleRef, titleWrapperProps, TitleWrapper } =
     useScrollingFixed<HTMLElement, HTMLHeadingElement>();
 
+  if (typeof window === "undefined") {
+    return null;
+  }
+
   return (
     <section
       ref={containerRef}
@@ -44,11 +48,11 @@ export const ContentComponent: React.FC<ContentProps> = (content) => {
           return (
             <div
               id={`item-${slug(title + item.title)}`}
-              className="flex break-inside-avoid scroll-m-24"
+              className="flex flex-wrap md:flex-nowrap break-inside-avoid scroll-m-24"
               key={index}
             >
-              <div className="mr-8 max-w-[150px] w-full text-slate-400 dark:text-slate-400">
-                <p className="font-bold flex items-center gap-2 text-slate-800 dark:text-slate-200">
+              <div className="mr-8 max-w-full md:max-w-[150px] w-full text-slate-400 dark:text-slate-400">
+                <p className="font-bold flex items-center gap-2 text-slate-800 dark:text-slate-200 max-md:text-lg">
                   {item.color && (
                     <div
                       className="w-3 h-3 rounded-full"
@@ -62,7 +66,7 @@ export const ContentComponent: React.FC<ContentProps> = (content) => {
                   {item.date}
                 </p>
               </div>
-              <div className="flex flex-col flex-1">
+              <div className="flex flex-col flex-1 max-md:mt-4">
                 {item.description ? (
                   <p className="text-slate-600 dark:text-gray-400">
                     <Markdown

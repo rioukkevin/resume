@@ -1,7 +1,5 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { ServerThemeProvider } from "next-themes";
-import Providers from "./providers";
 import { generalData } from "@/data/general";
 import type { Metadata } from "next";
 import { Toolbar } from "@/components/Toolbar";
@@ -35,14 +33,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ServerThemeProvider attribute="class">
-      <html lang="en">
-        <body className={`${inter.className} dark:bg-neutral-900`}>
-          <Providers>
-            <Toolbar>{children}</Toolbar>
-          </Providers>
-        </body>
-      </html>
-    </ServerThemeProvider>
+    <html lang="en">
+      <body
+        className={`${inter.className} bg-zinc-50 dark:bg-zinc-950 transition-all duration-300`}
+      >
+        <Toolbar>{children}</Toolbar>
+      </body>
+    </html>
   );
 }

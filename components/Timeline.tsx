@@ -82,8 +82,8 @@ export const Timeline = () => {
   };
 
   return (
-    <div className="w-full my-4 page-break-inside-avoid">
-      <div className="flex flex-wrap gap-4 mb-4 text-sm">
+    <div className="w-full my-4 page-break-inside-avoid max-md:-mt-4">
+      <div className="flex flex-wrap gap-2 md:gap-4 mb-2 md:mb-4 text-sm">
         {experiences.map((exp, i) => (
           <div
             key={exp.title}
@@ -98,12 +98,12 @@ export const Timeline = () => {
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: exp.color ?? colors[i] }}
             />
-            <span>{exp.title}</span>
+            <span className="text-zinc-950 dark:text-zinc-50">{exp.title}</span>
           </div>
         ))}
       </div>
 
-      <div className="p-4 bg-gray-100 rounded-lg pb-8">
+      <div className="p-4 bg-zinc-100 dark:bg-zinc-900 rounded-lg pb-8">
         <div
           className="relative w-full h-12 rounded"
           style={{ height: `${BAR_HEIGHT * experiences.length}px` }}
@@ -113,11 +113,11 @@ export const Timeline = () => {
               (month + absoluteStartMonth) % 12 === 0 ? (
                 <div
                   key={month}
-                  className="relative dark:text-neutral"
+                  className="relative text-zinc-950 dark:text-zinc-50"
                   style={{ width: 100 / totalMonth + "%" }}
                 >
                   <div
-                    className="absolute h-12 w-px border-l border-dotted border-gray-300 dark:border-gray-700 z-10"
+                    className="absolute h-12 w-px border-l border-dotted border-zinc-300 dark:border-zinc-600 z-10"
                     style={{ bottom: "24px" }}
                   ></div>
                   {Math.floor((month + absoluteStartMonth) / 12) +

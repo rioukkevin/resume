@@ -1,12 +1,12 @@
+"use client";
+
 import {
   cloneElement,
   FC,
   PropsWithChildren,
   ReactElement,
-  ReactNode,
   RefObject,
   useEffect,
-  useMemo,
   useRef,
   useState,
 } from "react";
@@ -25,7 +25,7 @@ const TitleWrapper: FC<TitleWrapperProps> = ({
 }) => {
   const clone = useRef<HTMLElement>(null);
   const clonedElement = cloneElement(children as ReactElement, {
-    className: `${(children as ReactElement).props.className} fixed top-0 z-10 bg-white transition-all duration-300 print:hidden ${
+    className: `${(children as ReactElement).props.className} fixed top-0 z-10 bg-zinc-50 dark:bg-zinc-950 transition-all duration-300 right-0 max-md:!w-auto left-0 px-4 md:right-auto md:px-0 md:left-auto max-w-full md:max-w-[210mm] print:hidden ${
       isSticky ? "translate-y-0" : "-translate-y-full"
     }`,
     ref: clone,
@@ -82,16 +82,6 @@ export const useScrollingFixed = <
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [bottomMargin]);
-
-  const RenderTitleWrapper: FC<PropsWithChildren> = ({ children }) => (
-    <TitleWrapper
-      isSticky={isSticky}
-      containerRef={containerRef}
-      setBottomMargin={setBottomMargin}
-    >
-      {children}
-    </TitleWrapper>
-  );
 
   return {
     containerRef,
